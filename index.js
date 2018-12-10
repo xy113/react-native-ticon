@@ -1,8 +1,8 @@
 import React from 'react';
-import {TouchableWithoutFeedback, Image} from 'react-native';
+import {TouchableOpacity, Image} from 'react-native';
 import {Map} from './map';
 
-export default class Ticon extends React.Component<{
+export class Ticon extends React.Component<{
     size:30,
     onPress:()=>null,
     color:'#333',
@@ -12,13 +12,14 @@ export default class Ticon extends React.Component<{
     render() {
         const {size, color, name} = this.props;
         return (
-            <TouchableWithoutFeedback
+            <TouchableOpacity
                 onPress={this.props.onPress}
                 style={{
                     width:size,
                     height:size,
                     ...this.props.style
                 }}
+                activeOpacity={1}
             >
                 <Image style={{
                     tintColor:color,
@@ -26,7 +27,7 @@ export default class Ticon extends React.Component<{
                     height:size,
                     resizeMode:'contain'
                 }} source={Map[name]}/>
-            </TouchableWithoutFeedback>
+            </TouchableOpacity>
         );
     }
 }
