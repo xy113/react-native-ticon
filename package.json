@@ -1,6 +1,6 @@
 {
   "name": "react-native-ticon",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "taobao icons for react-native",
   "main": "index.js",
   "scripts": {
@@ -11,11 +11,12 @@
   ],
   "author": "xy113<songdewei@163.com>",
   "license": "MIT",
-  "peerDependencies": {
-    "react-native": "^0.41.2"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/xy113/react-native-ticon.git"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   }
 }
